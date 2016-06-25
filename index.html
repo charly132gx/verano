@@ -25,8 +25,8 @@ document.addEventListener("deviceready",function(){
 
 					$.ajax({
 						type:"POST",
-						/*url:"http://itslmoviles.260mb.net/guardar.php",*/
-						url:"guardar.php",
+						url:"http://charlyxaar.esy.es/guardar.php",
+						/*url:"guardar.php",*/
 						data:"nomb="+nom+"&clav="+clave+"&prec="+p+"&existen="+e+"&prov="+provee,
 						success: exeGuardar
 					});
@@ -42,8 +42,8 @@ document.addEventListener("deviceready",function(){
 			alert("listo");
 			$.ajax({
 				type:"POST",
-				//url:"http://itslmoviles.260mb.net/consultaTodo.php",
-				url:"consultaTodo.php",
+			url:"http://charlyxaar.esy.es/consultaTodo.php",
+			/*	url:"consultaTodo.php",*/
 				data:"",
 				success: function(datos){
 					var reg=$.parseJSON(datos);
@@ -62,7 +62,9 @@ document.addEventListener("deviceready",function(){
 			var id=("#idReg").val();
 			$.ajax({
 				type:"POST",
-				url:"consultaId.php",
+
+				url:"http://charlyxaar.esy.es/consultaId.php",
+				/*url:"consultaId.php",*/
 				data:"id="+id,
 				success: function(datos){
 					var reg1=$.parseJSON(datos);
@@ -81,7 +83,8 @@ document.addEventListener("deviceready",function(){
 
 			$.ajax({
 				type:"POST",
-				url:"consultaTodo.php",
+				url:"http://charlyxaar.esy.es/consultaTodo.php",
+					/*url:"consultaTodo.php",*/
 				data:"",
 				success: function(datos){
 					var reg=$.parseJSON(datos);
@@ -100,7 +103,8 @@ document.addEventListener("deviceready",function(){
 			var id=$("#idRegEliminar").val();
 			$.ajax({
 				type:"POST",
-				url:"eliminar.php",
+				url:"http://charlyxaar.esy.es/eliminar.php",
+				/*url:"eliminar.php",*/
 				data:"id="+id,
 				success: function(datos){
 					alert("Respuesta:"+datos);
@@ -112,7 +116,8 @@ document.addEventListener("deviceready",function(){
 
 			$.ajax({
 				type:"POST",
-				url:"consultaTodo.php",
+				url:"http://charlyxaar.esy.es/consultaTodo.php",
+
 				data:"",
 				success: function(datos){
 					var reg=$.parseJSON(datos);
@@ -131,7 +136,7 @@ document.addEventListener("deviceready",function(){
 			var id=$("#idRegAct").val();
 			$.ajax({
 				type:"POST",
-				url:"consultaId.php",
+				url:"http://charlyxaar.esy.es/consultaId.php",
 				data:"id="+id,
 				success: function(datos){
 					//alert("Respuesta:"+datos);
@@ -166,7 +171,7 @@ document.addEventListener("deviceready",function(){
 
 					$.ajax({
 						type:"POST",
-						url:"guardarAct.php",
+						url:"http://charlyxaar.esy.es/guardar.phpguardarAct.php",
 						data:"id="+id+"&nomb="+nom+"&clav="+clave+"&prec="+p+"&existen="+e+"&prov="+provee,
 						success: exeGuardarAct
 					});
