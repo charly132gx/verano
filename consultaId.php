@@ -3,18 +3,18 @@ include "conexion.php";
 $id=$_POST['id'];
 
 $sql="SELECT * FROM equipos_computo where Id=$id";
-$result=mysql_query($sql,$conexion);
+$result=mysqli_query($conexion,$sql);
 $info= array();
 if($result){
-$i=0;	
-while($fila=mysql_fetch_assoc($result)){
+$i=0;
+while($fila=mysqli_fetch_assoc($result)){
 	$info[$i]=$fila;
 	$i=$i+1;
 	}
 }else{
-	echo "Error al ejecutar la consulta:".mysql_error();
+	echo "Error al ejecutar la consulta:".mysqli_error();
 }
-mysql_close($conexion);
+mysqli_close($conexion);
 echo json_encode($info);
 
 ?>

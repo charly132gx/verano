@@ -4,12 +4,12 @@ include "conexion.php";
 $id=$_POST['id'];
 
 $sql="DELETE  FROM equipos_computo where id=$id";
-$resp=mysql_query($sql,$conexion);
+$resp=mysqli_query($conexion,$sql);
 
 if($resp){
-echo "El registro fue eliminado correctamente"; 	
+echo "El registro fue eliminado correctamente";
 }else{
-echo "Ocurrioun error al eliminar el registro:".mysql_error();
+echo "Ocurrioun error al eliminar el registro:".mysqli_error();
 }
-mysql_close($conexion);
+mysqli_close($conexion);
 ?>

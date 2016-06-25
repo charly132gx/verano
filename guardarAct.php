@@ -10,12 +10,12 @@ $existencia=$_POST['existen'];
 $proveedor=$_POST['prov'];
 
 $sql="UPDATE equipos_computo SET Id='$id', Nombre_equipo='$nombre', Clave='$clave', Precio='$pr', Existencia='$existencia', Proveedor='$proveedor' WHERE Id=$id";
-$res=mysql_query($sql,$conexion);
+$res=mysqli_query($conexion,$sql);
 if($res){
 	echo "Los datos se actualizaron de manera exitosa";
 	echo "nombre:".$nombre." clave:".$clave." Precio:".$pr." exist:".$existencia." Proveedor:".$proveedor;
 	}else{
-		  echo "Se produjo un error al momento de Actualizar los datos:".mysql_error();
+		  echo "Se produjo un error al momento de Actualizar los datos:".mysqli_error();
 		}
-mysql_close($conexion);
+mysqli_close($conexion);
 ?>
